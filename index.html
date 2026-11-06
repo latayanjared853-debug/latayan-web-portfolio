@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hobbies">Others</a></li>
+            <li><button id="toggle">🌙</button></li>
+        </ul>
+    </nav>
+
+    <script>
+  document.getElementById("toggle").onclick = function () {
+    document.body.classList.toggle("dark");
+    this.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  };
+</script>
+
+    <div id="home" class="profile-card">
+    <img src="shsgrad.png" alt="ramie" class="profile-img">
+    <h1>Hello I'm Cris Jared C. Latayan</h1>    
+    <p> Hi! I'm a 2nd-year BSIT student who enjoys learning 
+    about computers and programming. I'm still improving 
+    my coding skills and trying to learn more about 
+    technology. I want to become a software developer 
+    someday and build programs that can be useful to others.
+    </p>
+    </div>
+</div>
+
+
+<div class="Skills" id="skills">
+    <h1>Skills</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Database</h3>
+            <p>Able to create and manage databases, and write basic SQL queries to add, edit, and search data.</p>
+        </div>
+
+        <div class="card">
+            <h3>Figma</h3>
+            <p>Designs simple website and app layouts in Figma, including layouts, colors, and buttons.</p>
+        </div>
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Builds the structure of a website using HTML, such as headings, paragraphs, images, links, and lists.</p>
+        </div>
+    </div>
+</div>
+
+<div class="Education">
+    <h1>Education</h1>
+
+    <div class="slider">
+        <div class="track" id="track">
+
+            <div class="slide">
+                <img src="elem.png" alt="Elementary school">
+                <div class="overlay">
+                    <h2>Miguel L. Aranda Memorial Elementary School<br>Elementary</h2>
+                    <p>Malvar, Batangas<br>Grade 1-6</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="shs.png" alt="Tayabas Western Academy">
+                <div class="overlay">
+                    <h2>Tayabas Western Academy<br>Senior High</h2>
+                    <p>General Academic strand<br>2023-2024</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="college.png" alt="CSTC College">
+                <div class="overlay">
+                    <h2>College of Sciences, Technologies and Communication Inc.<br>College</h2>
+                    <p>Information and Technology (IT)<br>2026-2027</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="document.getElementById('track').style.transform = 'translateX(0%)'">1</button>
+        <button onclick="document.getElementById('track').style.transform = 'translateX(-100%)'">2</button>
+        <button onclick="document.getElementById('track').style.transform = 'translateX(-200%)'">3</button>
+    </div>
+</div>
+
+<div class="Awards">
+    <h1>Awards</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Mythical 5</h3>
+            <img src="mayabang.png" alt="Mythical 5 medal">
+        </div>
+
+        <div class="card">
+            <h3>Honor</h3>
+            <img class="Honor" src="nyonors.png" alt="With Honors">
+        </div>
+
+        <div class="card">
+            <h3>Cheerdance</h3>
+            <img class="Cheerdance" src="budots.png" alt="Cheerdance trophy">
+        </div>
+    </div>
+</div>
+
+<div class="Hobbies" id="hobbies">
+    <h1>Hobbies</h1>
+
+    <div class="slider">
+        <div class="track" id="track2">
+
+            <div class="slide">
+                <img src="rene.png" alt="Elementary school">
+                <div class="overlay">
+                    <h2>Basketball</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="penta.png" alt="Tayabas Western Academy">
+                <div class="overlay">
+                    <h2>Gaming</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="nalunod.png" alt="CSTC College">
+                <div class="overlay">
+                    <h2>Swimming</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="document.getElementById('track2').style.transform = 'translateX(0%)'">1</button>
+        <button onclick="document.getElementById('track2').style.transform = 'translateX(-100%)'">2</button>
+        <button onclick="document.getElementById('track2').style.transform = 'translateX(-200%)'">3</button>
+    </div>
+</div>
+    <h1 class="projects-title">Project Accomplished</h1>
+
+<div class="projects">
+  <div class="project">
+    <img src="project1.png" alt="Project 1">
+    <h3>Simple c++ calculator</h3>
+  </div>
+
+  <div class="project">
+    <img src="project2.png" alt="Project 2">
+    <h3>c# calculator</h3>
+  </div>
+
+  <div class="project">
+    <img src="project3.png" alt="Project 3">
+    <h3>Web Portfolio</h3>
+  </div>
+</div>
+
+<footer id="contact">
+  <h3>Contact</h3>
+  <p>Phone: 0948 718 6104</p>
+  <p>Email: <a href="mailto:jaredlatayan@email.com">jaredlatayan@email.com</a></p>
+  <p>
+    <a href="https://www.youtube.com/@stevebuildswebsites" target="_blank">YouTube</a> |
+    <a href="https://www.instagram.com/jaridoooo/" target="_blank">Instagram</a>
+  </p>
+  <p class="copyright">© 2026 Cris Jared C. Latayan</p>
+</footer>
+    

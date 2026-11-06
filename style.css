@@ -1,0 +1,431 @@
+
+:root {
+  --background: #FFF5F7;
+  --soft-pink: #FCE4EC;
+  --accent: #F4B6C2;
+  --rose: #D98FA3;
+  --text: #49343B;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;   
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px;
+  background-color: var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  background-color: var(--rose);
+  color: white;
+}
+
+
+.profile-card {
+  text-align: center;
+  padding: 100px;
+  border-radius: 15px;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.profile-card p {
+  max-width: 460px;
+  margin: 15px auto;
+  line-height: 1.5;
+}
+
+.profile-img {
+  width: 280px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16%;
+  border: 3px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.Skills,
+.Education,
+.Awards,
+.Hobbies {
+  padding: 40px 60px;
+}
+
+.Skills h1,
+.Education h1,
+.Awards h1,
+.Hobbies h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 0 40px 0;
+}
+
+
+.Skills h1::after,
+.Education h1::after,
+.Awards h1::after,
+.Hobbies h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: var(--rose);
+  border-radius: 10px;
+  margin: 12px auto 0;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  background-color: var(--soft-pink);
+  padding: 30px 25px;
+  border-radius: 16px;
+  border-top: 6px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(217, 143, 163, 0.25);
+  min-height: 150px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-top-color: var(--rose);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(217, 143, 163, 0.4);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--rose);
+}
+
+.card p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 75%;
+}
+
+.card img.Honor,
+.card img.Cheerdance {
+  object-fit: contain;
+  background-color: rgba(73, 52, 59, 0.08);
+  border-radius: 10px;
+}
+
+.slider {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  background-color: var(--accent);
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(73, 52, 59, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h2 {
+  max-width: 700px;
+  line-height: 1.3;
+  margin: 0 0 15px;
+}
+
+.overlay p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.buttons button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--rose);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--rose);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 6px;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background-color: var(--rose);
+  color: white;
+  transform: scale(1.15);
+}
+
+.Hobbies .slider {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.Hobbies .slide img {
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-position: center 40%;
+}
+
+
+.projects-title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 60px 0 40px;
+}
+
+.projects-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: var(--rose);
+  border-radius: 10px;
+  margin: 12px auto 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 0 60px;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  filter: brightness(0.4);
+  transition: transform 0.5s ease;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project h3 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  margin: 0;
+  color: var(--accent);
+}
+
+footer {
+  margin-top: 60px;
+  padding: 50px 20px 30px;
+  background: linear-gradient(to bottom, var(--background), var(--accent));
+  text-align: center;
+}
+
+footer h3 {
+  margin: 0 0 10px;
+  color: var(--rose);
+}
+
+footer p {
+  margin: 6px auto;
+  padding: 6px 14px;
+  width: fit-content;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+footer p:hover {
+  background-color: var(--rose);
+  color: white;
+}
+
+footer a {
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: var(--text);
+  text-decoration: underline;
+}
+
+footer a:hover {
+  background: none;
+  color: white;
+}
+
+footer p:hover a {
+  color: white;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+
+a {
+  background-color: var(--link-bg, white);
+}
+
+body.dark {
+  --background: #1e1418;
+  --soft-pink: #2d1f25;
+  --accent: #4a2c37;
+  --rose: #e8a3b7;
+  --text: #f5e6ea;
+  --link-bg: #2d1f25;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .project h3 {
+  color: var(--rose);
+}
+
+body.dark footer a:hover {
+  background: none;
+}
+
+#toggle {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+body.dark #toggle {
+  background-color: var(--soft-pink);
+}
+
+#toggle:hover {
+  background-color: var(--rose);
+}
+
+img { max-width: 100%; }
+
+.profile-card {
+  width: 100%;
+  max-width: 1250px;
+  padding: 100px 20px;
+}
+
+@media (max-width: 1024px) {
+  nav { flex-wrap: wrap; }
+  .Skills, .Education, .hobbies-box { padding: 20px 40px; }
+  .awards, .projects { padding: 0 40px; }
+  .Skills h1, .Education h1, .awards-title,
+  .hobbies-box h1, .projects-title { font-size: 2.5rem; margin: 30px 0; }
+  .awards, .projects, .hobbies { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  nav { flex-direction: column; gap: 10px; }
+  nav h1 { font-size: 1.4rem; }
+  nav ul { padding: 0; }
+  a { margin: 4px; padding: 8px; }
+  #toggle { margin: 4px; }
+
+  .profile-card { padding: 40px 20px; }
+  .profile-card h1 { font-size: 1.6rem; }
+  .profile-img { width: 200px; height: 260px; }
+
+  .Skills, .Education, .hobbies-box { padding: 20px; }
+  .awards, .projects { padding: 0 20px; }
+  .Skills h1, .Education h1, .awards-title,
+  .hobbies-box h1, .projects-title { font-size: 1.8rem; margin: 20px 0; }
+
+  .cards, .awards, .projects, .hobbies { grid-template-columns: 1fr; }
+  .slide img { height: 300px; }
+  footer { padding: 30px 20px; }
+}
